@@ -1,0 +1,11 @@
+version: '2.2'
+
+services:
+  cyberchef_app:
+    build: .
+    container_name: cyberchef_app
+    ports:
+      - 8080:8080
+    tmpfs:
+      - /var/log:size=150M
+    restart: "no"
